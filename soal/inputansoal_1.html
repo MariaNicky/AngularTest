@@ -1,0 +1,8 @@
+<div ng-controller="inputan">
+<input type="text" ng-value="inputStatis"/>
+<h1>{{inputStatis}}</h1>
+<select ng-model="inputSelect">
+	<option ng-repeat="key in inputSelectionKeys" ng-value="key">
+	{{inputSelection[key]}}</option>
+</select>
+</div>

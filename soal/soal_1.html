@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="sismiop">
+
+<head>
+    <title>Nicky Soal 1-5</title>
+    <script src="angular.min.js"></script>
+    <script src="angular-cookies.js"></script>
+    <script src="jquery.js"></script>
+    <script src="scriptsoal_1.js"></script>
+</head>
+<body bgcolor="black">
+<font face="Century Gothic"color="white">
+<hr size="3" color="darkkhaki"><hr size="5" color="darkolivegreen">
+
+    <div ng-controller="inputtext">
+    <h4>Soal 1 : {{namaUser}} </h4>
+        <label>Input Text : </label>
+        <input type="text" ng-model="namaUser" placeholder=" input text in here">
+    </div>
+    <br>
+<hr size="3" color="darkkhaki"><hr size="5" color="darkolivegreen">
+
+    <div ng-controller="inputnumber">
+    <h3>Soal 2 : {{ nomor | currency:"IDR ":2}}</h3>
+        <label>Input Number : </label>
+        <input type="Number" ng-model="nomor" placeholder=" input number in here">
+    </div>
+    <br>
+<hr size="3" color="darkkhaki"><hr size="5" color="darkolivegreen">
+
+    <div ng-controller="inputkaryawanlist">
+    <h2>Soal 3 </h2>
+        <label>Nama-nama Karyawan : </label>
+        <ul>
+        <li ng-repeat="each in list">
+            {{each}}
+        </li>
+        </ul>
+    </div>
+    <br>
+<hr size="3" color="darkkhaki"><hr size="5" color="darkolivegreen">
+
+    <div ng-controller="inputkaryawanselect">
+    <h1>Soal 4 </h1>
+        <label>Daftar Karyawan : </label>
+        <select ng-model="inputSelect">
+        <option ng-repeat="key in inputSelectionKeys" ng-value="key">{{inputSelection[key]}}</option>
+        </select>
+    </div>
+    <br>
+<hr size="3" color="darkkhaki"><hr size="5" color="darkolivegreen">
+
+    <div ng-controller="page">
+    <h1>Soal 5 </h1>
+      <ul>
+        <li ng-repeat="row in list track by $index">
+          <input type="text" ng-model="row.nama"/>
+        </li>
+      </ul>
+      <ul>
+        <li ng-repeat="row in list track by $index">
+          <h1>{{row.nama}}</h1>
+        </li>
+      </ul>
+    </div>
+    <br>
+<hr size="3" color="darkkhaki"><hr size="5" color="darkolivegreen">
+</font>
+</body>
+</html>
